@@ -10,31 +10,37 @@
 ## 🗂 폴더 구조
 ```
 _config.yml        # Jekyll 설정
-_pages/            # 카테고리별 글 (현재 post 형태 레이아웃 사용)
-  categories/
-    <category>/
-      YYYY-MM-DD-title.md
-LICENSE-CC-BY-SA   # 글 기본 라이선스
+_posts/            # 표준 블로그 포스트 (YYYY-MM-DD-slug.md)
+assets/css/        # 스타일 커스터마이징 (style.scss)
+assets/images/     # 이미지 자산 (카테고리/슬러그별 폴더 권장)
+LICENSE-CC-BY-SA   # 라이선스
 Gemfile            # Gem 의존성 (github-pages)
+index.md           # 포스트 인덱스 (pagination 대응)
 ```
-> `_posts/` 대신 `_pages/categories/<카테고리>/` 구조를 사용 중. 파일명에 날짜를 넣어 퍼머링크와 정렬에 활용.
+> 2025-08 전환: 기존 `_pages/categories/**` 구조 → **표준 `_posts`** 로 마이그레이션. 이전 URL 은 `jekyll-redirect-from` 플러그인으로 리다이렉트.
 
-## 🧾 글 작성 규칙
-1. 파일 위치: `_pages/categories/<카테고리>/YYYY-MM-DD-title.md`
-2. 파일명 규칙: `YYYY-MM-DD-슬러그.md` (슬러그는 소문자/하이픈)
-3. Front Matter 예시:
-   ```yaml
-   ---
-   layout: post
-   title: "Attention Is All You Need 논문 : 처음 읽어보기! - (1)"
-   date: 2025-02-20 18:20:24 +0900
-   categories: [llm-engineering]
-   tags: [Transformer, 논문리뷰]
-   ---
-   ```
-4. `categories` 는 배열 형태. 현재 1개만 넣어도 배열 유지.
-5. 이미지: `assets/images/<카테고리>/...` (폴더 아직 없으면 생성)
-6. 수식: kramdown + MathJax (원하면 `_includes/head.html` 커스터마이징으로 추가 예정)
+## 🧾 글 작성 규칙 (표준 `_posts`)
+1. 위치: `_posts/YYYY-MM-DD-slug.md`
+2. 파일명: 날짜 + 소문자-hyphen 슬러그 (영문/숫자 + 한글 혼용 가능하나 URL 깔끔함 위해 영문 추천)
+3. Front Matter 최소:
+  ```yaml
+  ---
+  layout: post
+  title: "포스트 제목"
+  date: 2025-08-28 10:30:00 +0900
+  categories: [llm-engineering]
+  tags: [Transformer, 논문리뷰]
+  ---
+  ```
+4. `categories` 배열: 1~2개 권장 (너무 세분화 지양)
+5. `tags` 는 세부 키워드 (검색/필터 예정)
+6. 이미지: `assets/images/<slug>/...` 폴더 만들어 사용
+7. 수식 필요 시: MathJax include 추후 추가 예정
+8. 이전 경로 유지 필요하면 `redirect_from:` 사용 예:
+  ```yaml
+  redirect_from:
+    - /llm-engineering/2025/08/28/포스트-슬러그/
+  ```
 
 ## 🛠 로컬 개발 환경 (Windows 기준)
 ### 1. Ruby 설치
@@ -69,8 +75,8 @@ bundle exec jekyll serve --livereload
   - YAML Front Matter 구문 오류 (탭 대신 공백 사용)
 
 ## 🔍 퍼머링크 & URL
-`permalink: /:categories/:year/:month/:day/:title/` 형태.
-예: `_pages/categories/llm-engineering/2025-02-20-attention-is-all-you-need-part1.md`
+`_config.yml` 설정: `/카테고리/연/월/일/슬러그/`
+예: `_posts/2025-02-20-attention-is-all-you-need-part1.md`
 → `/llm-engineering/2025/02/20/attention-is-all-you-need-part1/`
 
 ## 🧩 메타/SEO
@@ -90,7 +96,7 @@ bundle exec jekyll serve --livereload
 | Liquid syntax error | `{% %}` `{ { } }` 오타 | 해당 파일 줄번호 확인 후 수정 |
 
 ## 🎨 현재 테마 (Hacker) & 커스터마이징
-현재 테마: **jekyll-theme-hacker** (GitHub Pages 기본 호환). 추가 스타일은 `assets/css/style.scss` 에서 오버라이드.
+현재 테마: **jekyll-theme-hacker**. 추가 스타일은 `assets/css/style.scss` 에서 오버라이드.
 
 커스터마이징 방법:
 1. 전역 폰트/레이아웃: `assets/css/style.scss` 수정
@@ -106,10 +112,11 @@ bundle exec jekyll serve --livereload
 테마를 다른 것으로 바꾸려면 `_config.yml` 의 `theme:` 값을 변경한 뒤 `bundle update`.
 
 ## 🧱 향후 개선 아이디어
-- 태그/카테고리 인덱스 자동 생성 스크립트
+- 태그/카테고리 인덱스 자동 생성 (카테고리 레이아웃)
 - 다크모드 토글
-- Mermaid 다이어그램 지원 (`mermaid.js` include)
-- 검색 (lunr.js 또는 simple-jekyll-search)
+- Mermaid 다이어그램 (`mermaid.js`)
+- 검색 (lunr.js → `search.json` 커스텀)
+- 시리즈(feature) 지원 (`series:` front matter)
 
 ## 🤝 기여
 PR 및 Issue 환영. 구조 단순 유지 지향.
