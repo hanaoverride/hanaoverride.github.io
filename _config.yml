@@ -13,10 +13,10 @@ author:
   email: "hanaoverride@gmail.com"
   url: "https://github.com/hanaoverride"
 
-# 테마 & 스타일 (remote shell theme 사용)
+# 테마 & 스타일
+theme: jekyll-theme-hacker
 sass:
   sass_dir: assets/css
-remote_theme: itstorque/jekyll-shell-theme
 
 # 플러그인 (GitHub Pages 호환 목록 내)
 plugins:
@@ -24,7 +24,6 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-redirect-from
-  - jekyll-remote-theme
 
 # 마크다운 & 하이라이터
 markdown: kramdown

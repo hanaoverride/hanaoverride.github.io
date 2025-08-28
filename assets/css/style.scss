@@ -2,9 +2,8 @@
 # Front matter 필요 (GitHub Pages 가 SASS 처리)
 ---
 
-/* Remote theme (itstorque/jekyll-shell-theme) provides its own CSS.
-  We do NOT @import site.theme because remote_theme doesn't set site.theme.
-  This file now only contains overrides. */
+/* Import theme base dynamically (ensures correct path on GitHub Pages) */
+@import "{{ site.theme }}";
 
 /* Korean font stack & readability tweaks */
 :root {
@@ -14,15 +13,9 @@
 body {
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Apple SD Gothic Neo","Noto Sans KR","Pretendard","Roboto","Helvetica Neue",Arial,sans-serif;
   line-height: 1.6;
-}
-
-/* Constrain main content if theme does not already */
-main, .container, .content, .wrapper {
   max-width: var(--body-max-width);
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 1.05rem;
-  padding-right: 1.05rem;
+  margin: 0 auto 3rem auto;
+  padding: 0 1.1rem;
 }
 
 pre, code {
@@ -66,17 +59,3 @@ pre, code {
 /* Dark mode accent tweak */
 a { transition: color .15s ease; }
 a:hover { color: #9f0; }
-
-/* License box fine-tune for shell background */
-.cc-license { border-top-color:#264; }
-
-/* Shell-like prompt style for headings (optional) */
-h2, h3 { position:relative; }
-h2:before, h3:before {
-  content: "$";
-  position:absolute;
-  left:-1.1rem;
-  color:#6f6;
-  opacity:.85;
-  font-weight:400;
-}
