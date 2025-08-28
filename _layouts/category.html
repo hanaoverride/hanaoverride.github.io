@@ -1,0 +1,23 @@
+---
+layout: default
+---
+<h1># {{ page.category }}</h1>
+<p style="opacity:.7;">카테고리: <code>{{ page.category }}</code></p>
+<ul>
+{%- assign posts_in_cat = site.posts | where_exp: 'p','p.categories contains page.category' | sort: 'date' | reverse -%}
+{%- for p in posts_in_cat -%}
+  <li>
+    <span style="white-space:nowrap;font-variant-numeric:tabular-nums;color:#6f6;">{{ p.date | date: '%Y-%m-%d' }}</span>
+    <a href="{{ p.url }}">{{ p.title }}</a>
+    {%- if p.tags and p.tags.size > 0 -%}
+      <span style="font-size:0.65rem;opacity:.55;">{{ p.tags | join: ', ' }}</span>
+    {%- endif -%}
+  </li>
+{%- endfor -%}
+</ul>
+
+{%- if posts_in_cat.size == 0 -%}
+<p>아직 글이 없습니다.</p>
+{%- endif -%}
+
+<p style="font-size:0.75rem;opacity:.6;margin-top:2rem;">Category index · 자동 생성 템플릿</p>

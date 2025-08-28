@@ -17,7 +17,25 @@ LICENSE-CC-BY-SA   # 라이선스
 Gemfile            # Gem 의존성 (github-pages)
 index.md           # 포스트 인덱스 (pagination 대응)
 ```
-> 2025-08 전환: 기존 `_pages/categories/**` 구조 → **표준 `_posts`** 로 마이그레이션. 이전 URL 은 `jekyll-redirect-from` 플러그인으로 리다이렉트.
+> 2025-08 전환: 기존 `_pages/categories/**` 구조 → **표준 `_posts`** 로 마이그레이션 완료. 모든 placeholder 본문 복원됨. 이전 URL 은 `jekyll-redirect-from` 플러그인으로 리다이렉트 유지.
+
+### 🔗 카테고리 인덱스 페이지
+각 1차 카테고리는 `<카테고리>/index.md` 파일을 두어 `_layouts/category.html` 레이아웃을 사용해 자동 목록 렌더링.
+
+새 카테고리 추가 절차:
+1. `_posts` 에 `categories: [새카테고리]` 로 글 하나 작성
+2. 루트에 `새카테고리/index.md` 생성
+  ```markdown
+  ---
+  layout: category
+  title: "새카테고리"
+  category: 새카테고리
+  permalink: /새카테고리/
+  ---
+  ```
+3. 로컬 서버로 목록 노출 확인
+
+레이아웃 로직은 `site.posts | where_exp:'p','p.categories contains page.category'` 기반 필터 사용.
 
 ## 🧾 글 작성 규칙 (표준 `_posts`)
 1. 위치: `_posts/YYYY-MM-DD-slug.md`
@@ -35,7 +53,7 @@ index.md           # 포스트 인덱스 (pagination 대응)
 4. `categories` 배열: 1~2개 권장 (너무 세분화 지양)
 5. `tags` 는 세부 키워드 (검색/필터 예정)
 6. 이미지: `assets/images/<slug>/...` 폴더 만들어 사용
-7. 수식 필요 시: MathJax include 추후 추가 예정
+7. 수식 필요 시: 추후 `_includes/head` 확장 후 MathJax 삽입 예정
 8. 이전 경로 유지 필요하면 `redirect_from:` 사용 예:
   ```yaml
   redirect_from:
@@ -112,7 +130,8 @@ bundle exec jekyll serve --livereload
 테마를 다른 것으로 바꾸려면 `_config.yml` 의 `theme:` 값을 변경한 뒤 `bundle update`.
 
 ## 🧱 향후 개선 아이디어
-- 태그/카테고리 인덱스 자동 생성 (카테고리 레이아웃)
+- (완료) 카테고리 인덱스 레이아웃 도입
+- 태그 인덱스 자동 생성 스크립트
 - 다크모드 토글
 - Mermaid 다이어그램 (`mermaid.js`)
 - 검색 (lunr.js → `search.json` 커스텀)
