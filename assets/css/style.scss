@@ -2,8 +2,8 @@
 # Front matter 필요 (GitHub Pages 가 SASS 처리)
 ---
 
-/* Import theme base (Hacker theme has its own style, we'll extend) */
-@import "jekyll-theme-hacker";
+/* Import theme base dynamically (ensures correct path on GitHub Pages) */
+@import "{{ site.theme }}";
 
 /* Korean font stack & readability tweaks */
 :root {
