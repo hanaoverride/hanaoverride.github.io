@@ -38,10 +38,6 @@ permalink: /:categories/:year/:month/:day/:title/
 # 페이지 / 포스트 기본값
 defaults:
   - scope:
-      path: "_pages"
-    values:
-      layout: post
-  - scope:
       path: ""
       type: posts
     values:
@@ -49,10 +45,8 @@ defaults:
       comments: false
 
 # 컬렉션 (필요시 확장 용도) — 지금은 _pages 폴더를 일반 페이지처럼 사용
-collections:
-  pages:
-    output: true
-    permalink: /:path/
+# (과거 _pages 컬렉션은 표준 _posts 마이그레이션 후 제거)
+# collections: (필요시 재도입)
 
 # SEO / 피드 설정
 feed:

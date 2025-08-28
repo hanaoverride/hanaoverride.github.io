@@ -18,6 +18,7 @@ Gemfile            # Gem 의존성 (github-pages)
 index.md           # 포스트 인덱스 (pagination 대응)
 ```
 > 2025-08 전환: 기존 `_pages/categories/**` 구조 → **표준 `_posts`** 로 마이그레이션 완료. 모든 placeholder 본문 복원됨. 이전 URL 은 `jekyll-redirect-from` 플러그인으로 리다이렉트 유지.
+> 2025-08-28 정리: 레거시 `_pages` 컬렉션 및 자산 제거. 필요한 이미지는 `assets/images/` 로 통합.
 
 ### 🔗 카테고리 인덱스 페이지
 각 1차 카테고리는 `<카테고리>/index.md` 파일을 두어 `_layouts/category.html` 레이아웃을 사용해 자동 목록 렌더링.

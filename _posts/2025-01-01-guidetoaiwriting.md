@@ -1,11 +1,12 @@
 ---
 layout: post
 title: "AI 글쓰기의 진실: 당신은 무엇을 원하는가"
-date: 2025-01-01 00:00:00 +0900
+date: 2025-08-28 10:15:00 +0900
 categories: [llm-user-guide]
 tags: [AI 글쓰기, 프롬프트 엔지니어링, 시스템 프롬프트, Claude, ChatGPT]
 redirect_from:
   - /llm-user-guide/2025/01/01/guidetoaiwriting/
+  - /llm-user-guide/2025/08/28/guidetoaiwriting/
 ---
 
 # AI 글쓰기의 진실: 당신은 무엇을 원하는가

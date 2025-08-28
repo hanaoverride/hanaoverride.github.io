@@ -1,12 +1,11 @@
 ---
 layout: post
 title: "벤자민 버튼, 거꾸로 가는 시간 속에서도 똑같이 흐르는 인생"
+date: 2025-08-28 10:00:00 +0900
 categories: [literature]
 tags: [피츠제럴드, 벤자민버튼, 영문학, 시간, 생애주기]
-date: 2025-08-28 08:24:24 +0900
-last_modified_at: 2025-08-28 08:24:24 +0900
-permalink: /literature/curious-case-of-benjamin-button/
-description: "『벤자민 버튼의 시간은 거꾸로 간다』를 통해 특수함 속에서 드러나는 인간 생애의 보편적 궤적을 성찰하는 글"
+redirect_from:
+  - /literature/2024/01/01/curiouscaseofbenjaminbutton/
 ---
 
 # 벤자민 버튼, 거꾸로 가는 시간 속에서도 똑같이 흐르는 인생
