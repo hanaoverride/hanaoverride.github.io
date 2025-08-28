@@ -202,7 +202,7 @@ GPT-5도 나쁘지 않지만, 한국어 글쓰기에서는 Claude가 더 자연�
 
 ### 3. AI 결과물
 
-[결과물 보기](https://hanaoverride.github.io/literature/curious-case-of-benjamin-button/)
+[결과물 보기]({% post_url 2025-08-28-curiouscaseofbenjaminbutton %})
 
 ## 가장 중요한 점: 당신이 무엇을 쓰고 싶은지 알아야 한다
 

@@ -6,6 +6,7 @@ categories: [literature]
 tags: [피츠제럴드, 벤자민버튼, 영문학, 시간, 생애주기]
 redirect_from:
   - /literature/2024/01/01/curiouscaseofbenjaminbutton/
+  - /literature/2025/08/28/curious-case-of-benjamin-button/
 ---
 
 # 벤자민 버튼, 거꾸로 가는 시간 속에서도 똑같이 흐르는 인생
