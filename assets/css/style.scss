@@ -1,0 +1,61 @@
+---
+# Front matter 필요 (GitHub Pages 가 SASS 처리)
+---
+
+/* Import theme base (Hacker theme has its own style, we'll extend) */
+@import "jekyll-theme-hacker";
+
+/* Korean font stack & readability tweaks */
+:root {
+  --body-max-width: 860px;
+}
+
+body {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Apple SD Gothic Neo","Noto Sans KR","Pretendard","Roboto","Helvetica Neue",Arial,sans-serif;
+  line-height: 1.6;
+  max-width: var(--body-max-width);
+  margin: 0 auto 3rem auto;
+  padding: 0 1.1rem;
+}
+
+pre, code {
+  font-family: "JetBrains Mono", "Source Code Pro", Consolas, "Courier New", monospace;
+  font-size: 0.92rem;
+}
+
+/* Headings spacing */
+.post h2, .post h3, .post h4 {
+  margin-top: 2.2rem;
+}
+
+/* Better table look */
+.post table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.9rem;
+}
+.post table th, .post table td {
+  border: 1px solid #2a2a2a;
+  padding: 6px 10px;
+}
+.post table th {
+  background: #111;
+}
+
+/* Tag list styling */
+.tags { margin-top: 1rem; }
+.tags a { background:#0f0; color:#111; padding:2px 7px; margin:0 4px 4px 0; display:inline-block; font-size:0.75rem; font-weight:600; text-transform:uppercase; }
+.tags a:hover { background:#9f0; text-decoration:none; }
+
+/* Responsive images */
+.post img { max-width:100%; height:auto; }
+
+/* Code block wrapping */
+.highlight pre { overflow-x:auto; }
+
+/* Footnotes */
+.footnotes { font-size:0.8rem; opacity:0.85; }
+
+/* Dark mode accent tweak */
+a { transition: color .15s ease; }
+a:hover { color: #9f0; }

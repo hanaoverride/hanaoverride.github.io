@@ -14,7 +14,9 @@ author:
   url: "https://github.com/hanaoverride"
 
 # 테마 & 스타일
-theme: minima
+theme: jekyll-theme-hacker
+sass:
+  sass_dir: assets/css
 
 # 플러그인 (GitHub Pages 호환 목록 내)
 plugins:
