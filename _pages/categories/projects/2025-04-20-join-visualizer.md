@@ -16,7 +16,7 @@ tags: [데이터베이스, JOIN연산, 시각화, Python, 교육도구]
 
 ## 왜 만들었냐고요?
 
-지난번에 쓴 글([JOIN 연산: 벤 다이어그램 모델은 그만]({{ site.baseurl }}{% post_url 2025-04-16-join-operations-beyond-venn %}))에서도 털어놨지만...
+지난번에 쓴 글([JOIN 연산: 벤 다이어그램 모델은 그만]({{ site.baseurl }}{% link _pages/categories/computer-science/2025-04-16-join-operations-beyond-venn.md %}))에서도 털어놨지만...
 **벤 다이어그램으로 JOIN 설명하는 거, 진짜 별로예요**.
 
 그래서 생각했죠.
