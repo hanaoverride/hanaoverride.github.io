@@ -349,7 +349,6 @@ visualize_embeddings()
 토큰 수가 모델 성능에 어떤 영향을 주는지:
 
 ```python
-```python
 # 토큰 효율성 비교 함수 (독립 실행 가능하도록 안전 장치 포함)
 def token_efficiency_test():
   try:
@@ -386,7 +385,7 @@ def token_efficiency_test():
     print(f"GPT-3.5 토큰 수: {len(tokens_35)}")
     print(f"GPT-4o 토큰 수: {len(tokens_4)}")
     print(f"효율성 개선: {efficiency}")
-```
+
 
 token_efficiency_test()
 ```
