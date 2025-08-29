@@ -1,8 +1,7 @@
 ---
-# Front matter 필요 (GitHub Pages 가 SASS 처리)
 ---
 
-/* Import theme base dynamically (ensures correct path on GitHub Pages) */
+/* Theme base import: GitHub Pages will process the Liquid tag below. */
 @import "{{ site.theme }}";
 
 /* Korean font stack & readability tweaks */
@@ -59,3 +58,11 @@ pre, code {
 /* Dark mode accent tweak */
 a { transition: color .15s ease; }
 a:hover { color: #9f0; }
+
+/* Same-category post navigation */
+.post-cat-nav { border-top:1px solid #333; margin-top:3rem; padding-top:1.2rem; font-size:0.8rem; }
+.post-cat-nav .links { display:flex; justify-content:space-between; gap:1rem; flex-wrap:wrap; }
+.post-cat-nav a { color:#6f6; text-decoration:none; }
+.post-cat-nav a:hover { color:#9f0; }
+.post-cat-nav-label { font-weight:600; opacity:.7; margin-bottom:.4rem; }
+.post-cat-nav .cat-index-link { margin-top:.6rem; opacity:.7; }

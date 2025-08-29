@@ -1,0 +1,55 @@
+---
+layout: default
+---
+<article class="post">
+  <header>
+    <h1>{{ page.title }}</h1>
+    <p style="opacity:.65;font-size:0.8rem;">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%Y-%m-%d %H:%M' }}</time>
+      · 카테고리:
+      {% if page.categories and page.categories.size > 0 %}
+        {% for c in page.categories %}
+          <a href="/{{ c }}/" style="color:#9f9;">{{ c }}</a>{% unless forloop.last %}, {% endunless %}
+        {% endfor %}
+      {% else %}
+        (none)
+      {% endif %}
+    </p>
+  </header>
+
+  {{ content }}
+
+  {% comment %}Same-category previous/next navigation (chronological by date ascending) {% endcomment %}
+  {% if page.categories and page.categories.size > 0 %}
+    {% assign primary_cat = page.categories | first %}
+    {% assign cat_posts = site.posts | where_exp: 'p','p.categories contains primary_cat' | sort: 'date' %}
+    {% assign prev_post = nil %}
+    {% assign next_post = nil %}
+    {% for p in cat_posts %}
+      {% if p.url == page.url %}
+        {% assign prev_index = forloop.index0 | minus: 1 %}
+        {% assign next_index = forloop.index0 | plus: 1 %}
+        {% if prev_index >= 0 %}
+          {% assign prev_post = cat_posts[prev_index] %}
+        {% endif %}
+        {% if next_index < cat_posts.size %}
+          {% assign next_post = cat_posts[next_index] %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+    <nav class="post-cat-nav">
+      <div class="post-cat-nav-label">같은 카테고리 글</div>
+      <div class="links">
+        {% if prev_post %}
+          <a class="prev" href="{{ prev_post.url }}" title="이전 (더 오래된 글)">&#x2190; 이전: {{ prev_post.title }}</a>
+        {% endif %}
+        {% if next_post %}
+          <a class="next" href="{{ next_post.url }}" title="다음 (더 새로운 글)">다음: {{ next_post.title }} &#x2192;</a>
+        {% endif %}
+      </div>
+      <div class="cat-index-link"><a href="/{{ primary_cat }}/">→ {{ primary_cat }} 목록</a></div>
+    </nav>
+  {% endif %}
+
+  {% include cc-license.html %}
+</article>
