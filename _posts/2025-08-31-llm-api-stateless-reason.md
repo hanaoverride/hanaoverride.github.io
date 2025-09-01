@@ -95,9 +95,9 @@ while True:
 
 ## 기존 웹 채팅 서비스와의 충돌: 왜 이렇게 다른가?
 
-### 전통적인 웹 채팅 구현
+### 전통적인 웹 채팅 구현: 세션 기반 구현체
 
-우리가 웹 기반 채팅 서비스를 구현한다면 보통 어떻게 구현할까요? 우선 **"세션"** 을 만들어 서버가 상태를 기억하도록 하겠죠? 그리고는 클라이언트가 일정 시간동안 응답하지 않으면 그 세션을 만료시키는겁니다. 실제로도 socket.io의 공식 문서를 보면 다음과 같은 내용을 언급하고 있어요:
+우리가 웹 기반 채팅 서비스를 구현한다면 보통 어떻게 구현할까요? 우선 **"세션"** 을 만들어 서버가 상태를 기억하도록 하겠죠? 그리고는 클라이언트가 일정 시간동안 응답하지 않으면 그 세션을 만료시키는겁니다. 대화 내용은 서버에 저장할수도, 저장하지 않을수도 있지만 LLM 서비스처럼 대화 한번에 전체 히스토리가 오가는 방식은 드물죠. 실제로도 socket.io의 공식 문서를 보면 다음과 같은 내용을 언급하고 있어요:
 
 The server sends a ping packet every `pingInterval` ms, and if the client does not answer with a pong within `pingTimeout` ms, the server considers that the connection is closed.
 
