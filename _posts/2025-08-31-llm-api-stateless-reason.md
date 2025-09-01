@@ -68,6 +68,8 @@ response2 = client.chat.completions.create(
 이는 OpenRouter만의 특이한 구현이 아닙니다. Microsoft의 Azure OpenAI 문서에서도 `"Because the model has no memory, you need to send an updated transcript with each new question or the model will lose the context of the previous questions and answers"`라고 명시하고 있습니다.
 
 > 원문: [Work with the Chat Completions models](https://learn.microsoft.com/en-us/azure/ai-foundry/openai/how-to/chatgpt?pivots=programming-language-chat-completions#working-with-the-chat-completion-api)
+
+
 ```python
 import os
 from openai import AzureOpenAI
