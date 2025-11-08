@@ -2,7 +2,7 @@
 layout: post
 title: "OpenWebUI 데이터베이스 커럽션 복구기"
 date: 2025-11-08 18:37:12 +0900
-categories: [computer-science]
+categories: [self-hosting]
 tags: [OpenWebUI, SQLite, PostgreSQL, 백업]
 ---
 
