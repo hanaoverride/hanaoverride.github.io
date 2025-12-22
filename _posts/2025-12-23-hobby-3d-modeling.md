@@ -12,7 +12,7 @@ tags: [3d, ai, modeling]
 
 여러가지 툴이 있지만 저는 Meshy AI가 가장 좋은 것 같습니다. **대학생이라면 1달 무료와 1년 할인 혜택까지 받으며 쓸 수 있으니 유사한 툴 중에서는 이게 가장 좋았던 것 같습니다.**
 
-> Meshy AI: ![Meshy AI](https://meshy.ai)
+> Meshy AI: [https://meshy.ai](https://meshy.ai)
 
 ![캐릭터 예시]({{ '/assets/images/2025-12-23-hobby-3d-modeling-1.gif' | relative_url }})
 
@@ -89,9 +89,9 @@ AI 특성상 원하지 않는 품질의 결과를 받을 수 있으나 **그냥 
 
 VRM 형태로 가공해서 MateEngine에서 즐기면 바탕화면에서 캐릭터와 채팅도 할 수 있어요.
 
-> MateEngine: ![https://github.com/shinyflvre/Mate-Engine](https://github.com/shinyflvre/Mate-Engine)
+> MateEngine: [https://github.com/shinyflvre/Mate-Engine](https://github.com/shinyflvre/Mate-Engine)
 
 만약 GPT나 Claude, Gemini 등으로 캐릭터 채팅을 해보고 싶다면 사용법이 까다롭긴 하지만, 제가 예전에 개발해둔 프로젝트도 소개해요.
 
-> MateEngine with OpenRouter: ![https://github.com/hanaoverride/Mate-Engine-OpenRouter](https://github.com/hanaoverride/Mate-Engine-OpenRouter)
+> MateEngine with OpenRouter: [https://github.com/hanaoverride/Mate-Engine-OpenRouter](https://github.com/hanaoverride/Mate-Engine-OpenRouter)
 
