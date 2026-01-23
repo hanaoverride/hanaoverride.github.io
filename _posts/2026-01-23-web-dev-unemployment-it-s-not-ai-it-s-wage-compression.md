@@ -1,10 +1,11 @@
 ---
 layout: post
-title: "Meshy AI로 내가 좋아하는 캐릭터 모델링해보기"
-date: 2025-12-23 08:10:00 +0900
-categories: [hobby]
-tags: [3d, ai, modeling]
+title: "Web Dev Unemployment: It’s Not AI, It’s Wage Compression"
+date: 2026-01-23 12:58:19 +0900
+categories: [thoughts]
+tags: [web, dev, unemployment, ai, wage-compression]
 ---
+
 
 # Web Dev Unemployment: It’s Not AI, It’s Wage Compression
 
@@ -76,7 +77,7 @@ My recommendation is **not to focus solely on web development.** A CSE degree qu
 * DevOps / Security
 * Mobile & Game Development
 * Embedded Systems / Robotics
-* **Computer Vision**
+* Computer Vision
 
 I quit my job in 2023. In early 2026, I'm now applying for **C++/Python Computer Vision roles**—because that's where my real passion and experience lie.
 
