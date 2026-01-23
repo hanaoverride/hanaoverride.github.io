@@ -51,7 +51,7 @@ Most people say that unemployment among web developers is caused by AI, but **th
 
 You may have heard of a service called **Builder.ai**, which claimed to build websites simply from natural-language descriptions. In reality, it was not an AI service at all, but one operated by low-wage human workers in developing countries.
 
-If you are not in a market that pays well for your work, AI services usually cost more than human workers. **Claude Code Max** costs $200 per month—that’s not cheap, right?
+If you are not in a market that pays well for your work, AI services usually cost more than human workers. **Claude Code Max 20x** costs $200 per month—that’s not cheap, right?
 
 If you lurk in Reddit communities, you’ll see that programmers in developing countries cannot afford these AI services. The cost of AI is so high that it is actually cheaper to hire human workers in those regions. Therefore, the rhetoric that AI is causing web developer unemployment is not quite justified.
 
