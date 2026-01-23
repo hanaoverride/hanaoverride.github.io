@@ -1,13 +1,13 @@
 ---
 layout: post
-title: "Web Dev Unemployment: It’s Not AI, It’s Wage Compression"
+title: "The Web Dev Saturation is Real: How to Pivot Your Career in a Post-AI Market"
 date: 2026-01-23 12:58:19 +0900
 categories: [thoughts]
 tags: [web, dev, unemployment, ai, wage-compression]
 ---
 
 
-# Web Dev Unemployment: It’s Not AI, It’s Wage Compression
+# The Web Dev Saturation is Real: How to Pivot Your Career in a Post-AI Market
 
 Most of the CSE graduates are having a hard time finding jobs in their field, essentially screaming into the void:
 
