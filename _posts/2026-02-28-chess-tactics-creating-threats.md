@@ -38,7 +38,7 @@ tags: [chess, tactics, threat, strategy]
 
 ![chess2](/assets/images/2026-02-28-chess-tactics-creating-threats-2.png)
 
-백은 흑의 의도를 파악하지 못하고, 진전을 위해 a4??를 둡니다. 하지만 백은 자신의 킹과 퀸이 같은 대각선에 있음을 간과했습니다.
+백은 흑의 의도를 파악하지 못하고, 프로모션 진전을 위해 a4??를 둡니다. 하지만 백은 자신의 킹과 퀸이 같은 대각선에 있음을 간과했습니다.
 
 ![chess3](/assets/images/2026-02-28-chess-tactics-creating-threats-3.png)
 
@@ -66,7 +66,7 @@ tags: [chess, tactics, threat, strategy]
 
 위협을 만드는 아이디어가 처음부터 직관적으로 다가오는 것은 아닙니다. 하지만 위협을 만드는 아이디어를 끊임없이 배울 수 있는 좋은 방법이 있는데, 오프닝을 공부하는 것입니다.
 
-이탈리안 게임: 투 나이트 어택, 나이트 어택 라인을 보겠습니다.
+이탈리안 게임: 투 나이트 디펜스, 나이트 어택 라인을 보겠습니다.
 
 ![chess7](/assets/images/2026-02-28-chess-tactics-creating-threats-7.png)
 
